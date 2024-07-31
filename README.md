@@ -222,8 +222,32 @@ print("======================== test =================================")
 ```
 
 size of data : 565.1Mb
+
 Nums of Node : 2 nodes
+
 Nums of Core : 8 cores
+
+When turn off one worker for check how data splitted. This log:
+
+```sh
+======================== test =================================                 
+Số lượng core đang sử dụng: 4
+======================== test =================================
+Số lượng partition của DataFrame là: 5
+======================== test =================================
+```
+
+When 2 worker on for check how data splitted. This log:
+
+```sh
+======================== test =================================                 
+Số lượng core đang sử dụng: 8
+======================== test =================================
+Số lượng partition của DataFrame là: 8
+======================== test =================================
+```
+
+So the above formula `How data split ??` is completely correct.
 
 ## Spark architechture
 The system currently supports several cluster managers:
