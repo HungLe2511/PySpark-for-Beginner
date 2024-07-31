@@ -53,7 +53,7 @@ The system currently supports several cluster managers:
   
 - Apache Mesos — a general cluster manager that can also run Hadoop MapReduce and service applications.
 
-![Codespace](image/rchitecture3.jpg)
+![Codespace](image/Apache-Mesos.png)
 
 
 - Hadoop YARN — the resource manager in Hadoop 2.
