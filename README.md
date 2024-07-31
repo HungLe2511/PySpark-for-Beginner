@@ -166,6 +166,8 @@ Web UI : http://master-node-ip:8080
 
 ![Codespace](image/web_UI.png)
 
+In the above example I have installed 2 worker nodes with IP as: 	`192.168.1.6:44821` and `	192.168.1.20:46807`
+
 ## Spark architechture
 The system currently supports several cluster managers:
 
