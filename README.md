@@ -21,3 +21,5 @@ Install python 3.10
 ```sh
 sudo apt install python3.10
 ```
+
+Install spark(should install the full version of spark to use it, the version you install with `pip install pyspark` will be difficult to understand.)
