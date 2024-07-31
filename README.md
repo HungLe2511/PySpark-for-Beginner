@@ -1,4 +1,4 @@
-# PySpark-for-Beginner-ETL
+![image](https://github.com/user-attachments/assets/2d53c82b-976d-4181-91c7-151b51178c3d)# PySpark-for-Beginner-ETL
 
 ! This project is built using Linux operating system (ubuntu 22.04)
 
@@ -111,6 +111,7 @@ Spark is known for its strength in being able to operate in parallel, how will t
 - A stage is a group of tasks that share the same start and end points, typically grouped based on shuffle operations. A stage in Spark corresponds to a step in the data processing pipeline.
 
   
+![Codespace](image/split_data.png)
 
 
 ## Spark architechture
