@@ -254,7 +254,7 @@ So the above formula `How data split ??` is completely correct.
 ### wide transformation and narrow transformation, shuffle
 
 Example:
-
+![Codespace](image/wide_narrow.png)
 
 ## Spark architechture
 The system currently supports several cluster managers:
