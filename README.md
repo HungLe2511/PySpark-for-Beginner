@@ -102,6 +102,14 @@ Spark is known for its strength in being able to operate in parallel, how will t
 
 ![Codespace](image/cluster.png)
 
+- Cluster: A group of machines working together to process data.
+- Driver Node: The node that controls the Spark application, distributing tasks and collecting results.
+- Worker Node: Nodes that execute the tasks and computations.
+- Executor: A process running on a worker node that performs the computations and manages data storage.
+- Partition: A division of a dataset, allowing parallel processing by multiple tasks.
+- A task is the basic unit of work in Spark. A task performs a specific part of the job and can run in parallel with other tasks.
+- A stage is a group of tasks that share the same start and end points, typically grouped based on shuffle operations. A stage in Spark corresponds to a step in the data processing pipeline.
+
 
 ## Spark architechture
 The system currently supports several cluster managers:
