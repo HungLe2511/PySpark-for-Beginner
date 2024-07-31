@@ -53,6 +53,10 @@ The system currently supports several cluster managers:
   
 - Apache Mesos — a general cluster manager that can also run Hadoop MapReduce and service applications.
 
-![Codespace](image/Standalone-Cluster.webp)
+![Codespace](image/rchitecture3.jpg)
+
+
 - Hadoop YARN — the resource manager in Hadoop 2.
+
+
 - Kubernetes — an open-source system for automating deployment, scaling, and management of containerized applications.
