@@ -28,7 +28,16 @@ wget https://dlcdn.apache.org/spark/spark-3.5.1/spark-3.5.1-bin-hadoop3.tgz
 tar -xzvf spark-3.5.1-bin-hadoop3.tgz
 ```
 
-Set up variable environment, open file .bashrc and add
+Set up variable environment, open file .bashrc by 
+```sh
+# open file
+nano ~/.bashrc
+
+# save config
+source ~/.bashrc
+```
+
+and add
 ```sh
 export SPARK_HOME=/path/to/spark
 export PATH=$PATH:$SPARK_HOME/bin
