@@ -17,6 +17,8 @@ This document is designed to be read in parallel with the code in the `PySpark-f
 - How spark work :
   - Spark operators
   - cluster, worker node, driver node, executor, partition, task, stage;
+  - how data splitted?
+  - wide transformation and narrow transformation, shuffle?
 - Code example and spark UI;
 - Spark performance optimization methods;
 
@@ -248,6 +250,11 @@ Số lượng partition của DataFrame là: 8
 ```
 
 So the above formula `How data split ??` is completely correct.
+
+### wide transformation and narrow transformation, shuffle
+
+Example:
+
 
 ## Spark architechture
 The system currently supports several cluster managers:
