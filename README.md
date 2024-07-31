@@ -126,6 +126,7 @@ df_coalesced = df.coalesce(5)  # Reduce to 5 partitions
 ```
 
 After understanding the operation on a node, how to `deploy` them when we need to use `multiple nodes` for large amounts of data?
+! Using Standalone mode
 
 config `spark-env.sh`
 ```sh
