@@ -114,7 +114,16 @@ Spark is known for its strength in being able to operate in parallel, how will t
   
 ![Codespace](image/split_data.png)
 
-
+So to divide data, in spark there are methods like: Repartition and coalesce
+Difference between `repartition` vs `coalesce`:
+- `repartition` is used to increase or decrease the number of partitions in a DataFrame or RDD. It performs a full shuffle of the data to evenly distribute it across the new partitions(`Full shuffle`)
+```sh
+df_repartitioned = df.repartition(10)  # Repartition into 10 partitions
+```
+- `coalesce` is used to decrease the number of partitions in a DataFrame or RDD without performing a full shuffle. It is a more efficient way to reduce the number of partitions compared to `repartition`(No `Full shuffle`)
+```sh
+df_coalesced = df.coalesce(5)  # Reduce to 5 partitions
+```
 ## Spark architechture
 The system currently supports several cluster managers:
 
