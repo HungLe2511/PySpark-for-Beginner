@@ -256,6 +256,16 @@ So the above formula `How data split ??` is completely correct.
 Example:
 ![Codespace](image/wide_narrow.png)
 
+In this example. 50k records be splitted by 5 part. I have 4 transform is : 
+- 3 transformation (Load, Map, ReduceByKey)
+- 1 Actions (Collect)
+
+When Map transformation is trigger, Data in each worker node only works with each other without exchanging data with other worker nodes is `Narrow Transformation`
+
+When ReduceByKey transformation is trigger, to be able to sum the records with the same data representation state that have been exchanged between worker nodes is `Wide Transformation`. This phenomenon is also called `shuffle`
+
+So in reality, wide transformation will consume a lot of resources as well as your time, so prioritize using narrow transformation first and then use wide transformation to avoid the shuffling phenomenon.
+
 ## Spark architechture
 The system currently supports several cluster managers:
 
