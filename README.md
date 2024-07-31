@@ -100,7 +100,7 @@ In the above example, filter(df.num > 1) is a `transformation`, which doesn't im
 
 Spark is known for its strength in being able to operate in parallel, how will they calculate, how is the data divided to calculate in parallel?
 
-
+![Codespace](image/cluster.png)
 
 
 ## Spark architechture
