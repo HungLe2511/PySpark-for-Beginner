@@ -1,3 +1,8 @@
+# Prerequisite
+Using basic:
+-  Python
+-  linux
+
 # PySpark-for-Beginner-ETL
 
 ! This project is built using Linux operating system (ubuntu 22.04)
