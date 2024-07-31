@@ -46,6 +46,7 @@ export PATH=$PATH:$SPARK_HOME/bin
 ## Resilient Distributed Datasets(RDD), Data Frame(DF), Spark SQL
 
 ![Codespace](image/RDD_DF_2.png)
+
 All the data unit types used for calculations in spark
 - Resilient Distributed Datasets(RDD) : `data file` in RAM, `meta data` no
 - Data Frame(DF)                      : `data file` in RAM, `meta data` yes
