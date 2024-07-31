@@ -46,6 +46,9 @@ and add
 export SPARK_HOME=/path/to/spark
 export PATH=$PATH:$SPARK_HOME/bin
 ```
+
+
+
 ## Resilient Distributed Datasets(RDD), Data Frame(DF), Spark SQL
 
 ![Codespace](image/RDD_DF_2.png)
@@ -96,6 +99,9 @@ In the above example, filter(df.num > 1) is a `transformation`, which doesn't im
 ### cluster, worker node, driver node, executor, partition
 
 Spark is known for its strength in being able to operate in parallel, how will they calculate, how is the data divided to calculate in parallel?
+
+
+
 
 ## Spark architechture
 The system currently supports several cluster managers:
