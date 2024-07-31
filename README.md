@@ -55,7 +55,11 @@ All the data unit types used for calculations in spark
 
 
 ## How Spark Works
-Tran
+
+`Lazy transformation` : its very important for understand `How Spark work`
+Example:
+
+
 
 
 
