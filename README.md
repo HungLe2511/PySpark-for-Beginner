@@ -124,6 +124,10 @@ df_repartitioned = df.repartition(10)  # Repartition into 10 partitions
 ```sh
 df_coalesced = df.coalesce(5)  # Reduce to 5 partitions
 ```
+
+After understanding the operation on a node, how to `deploy` them when we need to use `multiple nodes` for large amounts of data?
+
+
 ## Spark architechture
 The system currently supports several cluster managers:
 
