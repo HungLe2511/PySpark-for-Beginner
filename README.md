@@ -164,7 +164,7 @@ $SPARK_HOME/sbin/start-worker.sh spark://master-node-ip:7077
 
 Web UI : http://master-node-ip:8080
 
-![Codespace](image/Standalone-Cluster.webp)
+![Codespace](image/web_UI.png)
 
 ## Spark architechture
 The system currently supports several cluster managers:
