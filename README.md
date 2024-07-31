@@ -110,6 +110,7 @@ Spark is known for its strength in being able to operate in parallel, how will t
 - A task is the basic unit of work in Spark. A task performs a specific part of the job and can run in parallel with other tasks.
 - A stage is a group of tasks that share the same start and end points, typically grouped based on shuffle operations. A stage in Spark corresponds to a step in the data processing pipeline.
 
+`How data split ??`
   
 ![Codespace](image/split_data.png)
 
