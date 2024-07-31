@@ -22,7 +22,8 @@ Install python 3.10
 sudo apt install python3.10
 ```
 
-Install spark (should install the full version of spark to use it, the version you install with `pip install pyspark` will be difficult to understand)
+Install spark (should install the full version of spark to use it, the version you install with `pip install pyspark` will be difficult to understand). After downloaded, install it
 ```sh
 wget https://dlcdn.apache.org/spark/spark-3.5.1/spark-3.5.1-bin-hadoop3.tgz
+tar -xzvf spark-3.5.1-bin-hadoop3.tgz
 ```
