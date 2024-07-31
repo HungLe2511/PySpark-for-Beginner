@@ -127,6 +127,44 @@ df_coalesced = df.coalesce(5)  # Reduce to 5 partitions
 
 After understanding the operation on a node, how to `deploy` them when we need to use `multiple nodes` for large amounts of data?
 
+config `spark-env.sh`
+```sh
+cp $SPARK_HOME/conf/spark-env.sh.template $SPARK_HOME/conf/spark-env.sh
+
+export SPARK_MASTER_HOST='master-node-ip'
+export SPARK_WORKER_CORES='number-of-cores'
+export SPARK_WORKER_MEMORY='memory-size'
+```
+
+config `workers`. List the IP addresses or hostnames of all worker nodes. This file is located in the `conf` directory
+
+```sh
+echo 'worker-node-1-ip' >> $SPARK_HOME/conf/slaves
+echo 'worker-node-2-ip' >> $SPARK_HOME/conf/slaves
+```
+
+config `spark-defaults.conf`
+
+```sh
+cp $SPARK_HOME/conf/spark-defaults.conf.template $SPARK_HOME/conf/spark-defaults.conf
+
+spark.master spark://master-node-ip:7077
+```
+Start master node
+
+```sh
+$SPARK_HOME/sbin/start-master.sh
+```
+
+Start worker node
+
+```sh
+$SPARK_HOME/sbin/start-worker.sh spark://master-node-ip:7077
+```
+
+Web UI : http://master-node-ip:8080
+
+![Codespace](image/Standalone-Cluster.webp)
 
 ## Spark architechture
 The system currently supports several cluster managers:
