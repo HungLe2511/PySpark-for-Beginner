@@ -47,6 +47,8 @@ export PATH=$PATH:$SPARK_HOME/bin
 The system currently supports several cluster managers:
 
 - Standalone — a simple cluster manager included with Spark that makes it easy to set up a cluster.
+![Codespace](image/Standalone-Cluster.webp)
+  
 - Apache Mesos — a general cluster manager that can also run Hadoop MapReduce and service applications.
 - Hadoop YARN — the resource manager in Hadoop 2.
 - Kubernetes — an open-source system for automating deployment, scaling, and management of containerized applications.
