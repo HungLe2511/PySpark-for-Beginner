@@ -169,6 +169,51 @@ Web UI : http://master-node-ip:8080
 
 In the above example I have installed 2 worker nodes with IP as: 	`192.168.1.6:44821` and `	192.168.1.20:46807`
 
+## Code example and WebUI
+
+I will only use this code for the entire presentation of spark properties
+```sh
+from pyspark.sql import SparkSession
+import os
+
+os.environ['AWS_ACCESS_KEY_ID'] = '*****************'
+os.environ['AWS_SECRET_ACCESS_KEY'] = '**********************'
+os.environ['AWS_DEFAULT_REGION'] = 'ap-southeast-2'
+
+# Initialize SparkSession
+spark = SparkSession.builder \
+    .appName("test_s3_3G_Ram") \
+    .config("spark.hadoop.fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem") \
+    .config("spark.hadoop.fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem") \
+    .config("spark.hadoop.fs.s3a.endpoint", "s3.amazonaws.com") \
+    .config("spark.hadoop.fs.s3a.aws.credentials.provider", "org.apache.hadoop.fs.s3a.SimpleAWSCredentialsProvider") \
+    .master("spark://192.168.1.20:7077")  \
+    .getOrCreate()
+
+    # Đọc dữ liệu từ S3 với header
+df = spark.read \
+    .option("header", "true") \
+    .csv("s3a://tesmakenewbuget/5m_Sales_Records.csv")
+
+print("======================== test =================================")
+# Lấy số lượng core mà Spark đang sử dụng
+num_cores = spark.sparkContext.defaultParallelism
+print(f"Số lượng core đang sử dụng: {num_cores}")
+
+print("======================== test =================================")
+print(df.show(5))
+
+
+# Kiểm tra số lượng partition của DataFrame `df`
+numPartitions = df.rdd.getNumPartitions()
+print(f"Số lượng partition của DataFrame là: {numPartitions}")
+
+spark.stop()
+
+print("======================== test =================================")
+
+```
+
 ## Spark architechture
 The system currently supports several cluster managers:
 
