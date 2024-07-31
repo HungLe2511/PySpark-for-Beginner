@@ -56,6 +56,9 @@ All the data unit types used for calculations in spark
 
 ## How Spark Works
 
+When spark is running, there are two most important operations in data transformation:
+- Transformations : is a transformation on DDF, DF, spark SQL but in reality these transformations will not be performed until spark receives actions
+- Actions : In Apache Spark, actions are operations that trigger the execution of computations defined on RDDs (Resilient Distributed Datasets), DataFrames, or Datasets. Unlike transformations, which define a new RDD, DataFrame, or Dataset from an existing one (but are lazy and do not trigger computation), actions cause Spark to execute the actual computation and produce a result.
 ![Codespace](image/1707004360663.png)
 
 `Lazy transformation` : its very important for understand `How Spark work`
