@@ -9,10 +9,8 @@ This document is designed to be read in parallel with the code in the `PySpark-f
 - How spark work :
   - Spark operators
   - cluster, worker node, driver node, executor, partition, task, stage
+- Spark performance optimization methods;
 - Spark architechture;
-- how to pass configuration parameters to a PySpark job;
-- how to handle dependencies on other modules and packages; and,
-- what constitutes a 'meaningful' test for an ETL job.
 
 ## Set up environment, var environment
 
