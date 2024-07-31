@@ -86,6 +86,7 @@ filtered_df.show()
 
 ```
 
+In the above example, filter(df.num > 1) is a `transformation`, which doesn't immediately execute but creates a lazy computation plan. When show() is called, Spark performs all necessary transformations to produce the result and display it. Therefore, show() is considered an `action`.
 
 
 
