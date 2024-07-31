@@ -8,7 +8,7 @@ This document is designed to be read in parallel with the code in the `PySpark-f
 - Resilient Distributed Datasets(RDD), Data Frame(DF), Spark SQL;
 - How spark work :
   - Spark operators
-  - cluster, worker node, driver node, executor, partition
+  - cluster, worker node, driver node, executor, partition, task, stage
 - Spark architechture;
 - how to pass configuration parameters to a PySpark job;
 - how to handle dependencies on other modules and packages; and,
@@ -96,7 +96,7 @@ filtered_df.show()
 
 In the above example, filter(df.num > 1) is a `transformation`, which doesn't immediately execute but creates a lazy computation plan. When show() is called, Spark performs all necessary transformations to produce the result and display it. Therefore, show() is considered an `action`.
 
-###  II, cluster, worker node, driver node, executor, partition
+###  II, cluster, worker node, driver node, executor, partition, task, stage
 
 Spark is known for its strength in being able to operate in parallel, how will they calculate, how is the data divided to calculate in parallel?
 
