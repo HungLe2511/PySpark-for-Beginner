@@ -45,6 +45,7 @@ export PATH=$PATH:$SPARK_HOME/bin
 ```
 ## Resilient Distributed Datasets(RDD), Data Frame(DF), Spark SQL
 
+![Codespace](image/RDD_DF.png)
 
 
 
