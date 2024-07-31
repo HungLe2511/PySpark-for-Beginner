@@ -60,3 +60,5 @@ The system currently supports several cluster managers:
 
 ![Codespace](image/yarn_arch.webp)
 - Kubernetes — an open-source system for automating deployment, scaling, and management of containerized applications.
+
+![Codespace](image/1_FIuvzHDPvibv6fV-2qdLrQ.webp)
