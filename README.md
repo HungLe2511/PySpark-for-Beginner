@@ -214,6 +214,10 @@ print("======================== test =================================")
 
 ```
 
+size of data : 565.1Mb
+Nums of Node : 2 nodes
+Nums of Core : 8 cores
+
 ## Spark architechture
 The system currently supports several cluster managers:
 
