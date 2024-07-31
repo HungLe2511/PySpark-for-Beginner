@@ -1,5 +1,5 @@
 # PySpark-for-Beginner-ETL
-
+! This project is built using Linux operating system
 This document is designed to be read in parallel with the code in the `PySpark-for-Beginner-ETL` repository. Together, these constitute what we consider to be a 'best practices' approach to writing ETL jobs using Apache Spark and its Python ('PySpark') APIs. This project addresses the following topics:
 
 - set up environment, var environment;
@@ -10,7 +10,9 @@ This document is designed to be read in parallel with the code in the `PySpark-f
 
 ## Set up environment
 
-Intall java 11
+Install java 11
 ```sh
 sudo apt-get install openjdk-11-jdk
 ```
+
+If you using ubuntu system, you can skip
