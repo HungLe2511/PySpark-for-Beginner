@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/2d53c82b-976d-4181-91c7-151b51178c3d)# PySpark-for-Beginner-ETL
+# PySpark-for-Beginner-ETL
 
 ! This project is built using Linux operating system (ubuntu 22.04)
 
