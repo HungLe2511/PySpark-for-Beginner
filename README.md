@@ -68,6 +68,23 @@ When spark is running, there are two most important operations in data transform
 
 Example:
 
+```sh
+# Ví dụ sử dụng Spark DataFrame
+from pyspark.sql import SparkSession
+
+# Tạo một SparkSession
+spark = SparkSession.builder.appName("Example").getOrCreate()
+
+# Tạo một DataFrame
+df = spark.createDataFrame([(1, 'a'), (2, 'b'), (3, 'c')], ['num', 'char'])
+
+# Transformation: lọc các hàng có num > 1
+filtered_df = df.filter(df.num > 1)
+
+# Action: hiển thị kết quả
+filtered_df.show()
+
+```
 
 
 
