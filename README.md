@@ -58,5 +58,5 @@ The system currently supports several cluster managers:
 
 - Hadoop YARN — the resource manager in Hadoop 2.
 
-
+![Codespace](image/yarn_arch.webp)
 - Kubernetes — an open-source system for automating deployment, scaling, and management of containerized applications.
