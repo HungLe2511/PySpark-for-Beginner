@@ -16,7 +16,7 @@ This document is designed to be read in parallel with the code in the `PySpark-f
 - Resilient Distributed Datasets(RDD), Data Frame(DF), Spark SQL;
 - How spark work :
   - Spark operators
-  - cluster, worker node, driver node, executor, partition, task, stage;
+  - cluster, worker node, driver node, executor, partition, stage, task;
   - how data splitted?
   - wide transformation and narrow transformation, shuffle?
 - Code example and spark UI;
@@ -105,7 +105,7 @@ filtered_df.show()
 
 In the above example, filter(df.num > 1) is a `transformation`, which doesn't immediately execute but creates a lazy computation plan. When show() is called, Spark performs all necessary transformations to produce the result and display it. Therefore, show() is considered an `action`.
 
-###  II, cluster, worker node, driver node, executor, partition, task, stage
+###  II, cluster, worker node, driver node, executor, partition, stage, task
 
 Spark is known for its strength in being able to operate in parallel, how will they calculate, how is the data divided to calculate in parallel?
 
@@ -116,9 +116,9 @@ Spark is known for its strength in being able to operate in parallel, how will t
 - Worker Node: Nodes that execute the tasks and computations.
 - Executor: A process running on a worker node that performs the computations and manages data storage.
 - Partition: A division of a dataset, allowing parallel processing by multiple tasks.
-- A task is the basic unit of work in Spark. A task performs a specific part of the job and can run in parallel with other tasks.
 - A stage is a group of tasks that share the same start and end points, typically grouped based on shuffle operations. A stage in Spark corresponds to a step in the data processing pipeline.
-
+- A task is the basic unit of work in Spark. A task performs a specific part of the job and can run in parallel with other tasks.
+  
 `How data split ??`
   
 ![Codespace](image/split_data.png)
