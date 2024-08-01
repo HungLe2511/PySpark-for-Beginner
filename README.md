@@ -287,6 +287,7 @@ So in reality, wide transformation will consume a lot of resources as well as yo
 
 We know that the `transformation process in Spark is lazy`. So if we want to use the result (after actions), do we have to redo the transformation process from the beginning?
 
+![Codespace](image/cache.png)
 
 
 Cache!
