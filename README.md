@@ -76,7 +76,7 @@ All the data unit types used for calculations in spark
 ![Codespace](image/1707004360663.png)
 
 When spark is running, there are two most important operations in data transformation:
-- `Transformations` : is a transformation on DDF, DF, spark SQL but in reality these transformations will not be performed until spark receives actions (`Lazy transformation`)
+- `Transformations` : is a transformation on RDD, DF, spark SQL but in reality these transformations will not be performed until spark receives actions (`Lazy transformation`)
 - `Actions` : In Apache Spark, actions are operations that trigger the execution of computations defined on RDDs (Resilient Distributed Datasets), DataFrames, or Datasets. Unlike transformations, which define a new RDD, DataFrame, or Dataset from an existing one (but are lazy and do not trigger computation), actions cause Spark to execute the actual computation and produce a result.
 
 ![Codespace](image/Transformations-and-actions-in-Apache-Spark.png)
@@ -118,6 +118,10 @@ Spark is known for its strength in being able to operate in parallel, how will t
 - Partition: A division of a dataset, allowing parallel processing by multiple tasks.
 - A stage is a group of tasks that share the same start and end points, typically grouped based on shuffle operations. A stage in Spark corresponds to a step in the data processing pipeline.
 - A task is the basic unit of work in Spark. A task performs a specific part of the job and can run in parallel with other tasks.
+
+ `How job split for each node??`
+
+ 
   
 `How data split ??`
   
