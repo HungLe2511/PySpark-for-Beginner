@@ -21,6 +21,7 @@ This document is designed to be read in parallel with the code in the `PySpark-f
     - how job split for each node?
     - how data splitted?
   - wide transformation and narrow transformation, shuffle?
+  - Cache vs persist
 - Code example and spark UI;
 - Spark performance optimization methods;
 
@@ -280,6 +281,23 @@ When Map transformation is trigger, Data in each worker node only works with eac
 When ReduceByKey transformation is trigger, to be able to sum the records with the same data representation state that have been exchanged between worker nodes is `Wide Transformation`. This phenomenon is also called `shuffle`
 
 So in reality, wide transformation will consume a lot of resources as well as your time, so prioritize using narrow transformation first and then use wide transformation to avoid the shuffling phenomenon.
+
+
+### cache vs persist
+
+We know that the `transformation process in Spark is lazy`. So if we want to use the result (after actions), do we have to redo the transformation process from the beginning?
+
+
+
+Cache!
+`Cache` is a mechanism for storing data in memory to improve performance for subsequent operations on the same data. When you use cache(), Spark will store the data of an RDD, DataFrame, or DataSet in the memory of the nodes in the Spark cluster so that subsequent operations can access it faster without having to recompute it from scratch.
+
+So when the RAM is full, how can we save DF?
+
+Persist!
+Like `cache`, `persist` can specify specific DF storage location (Ram, Disk,..)
+
+But you need to pay attention when using these 2 methods, you should `unpersist` after using, to avoid the case where the data is not cleared when completing the work in a spark session.
 
 ## Spark architechture
 The system currently supports several cluster managers:
