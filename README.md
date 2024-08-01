@@ -12,7 +12,6 @@ This article will not go into the definition of specific transformations and act
 This document is designed to be read in parallel with the code in the `PySpark-for-Beginner-ETL` repository. Together, these constitute what we consider to be a 'best practices' approach to writing ETL jobs using Apache Spark and its Python ('PySpark') APIs. This project addresses the following topics:
 
 - set up environment, var environment;
-- Spark architechture;
 - Resilient Distributed Datasets(RDD), Data Frame(DF), Spark SQL;
 - How spark work :
   - Spark operators
@@ -23,8 +22,7 @@ This document is designed to be read in parallel with the code in the `PySpark-f
   - wide transformation and narrow transformation, shuffle?
   - Cache vs persist
 - Code example and spark UI;
-- Spark performance optimization methods;
-
+- Spark architechture;
 
 ## Set up environment, var environment
 
