@@ -120,8 +120,7 @@ Spark is known for its strength in being able to operate in parallel, how will t
 - A task is the basic unit of work in Spark. A task performs a specific part of the job and can run in parallel with other tasks.
 
  `How job split for each node??`
-
- 
+ ![Codespace](image/job_stage_task.png)
   
 `How data split ??`
   
