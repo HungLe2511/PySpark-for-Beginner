@@ -123,6 +123,7 @@ Spark is known for its strength in being able to operate in parallel, how will t
 
 `how many of executor for each node?`
 
+ ![Codespace](image/executor.png)
 
 
 `How job split for each node??`
