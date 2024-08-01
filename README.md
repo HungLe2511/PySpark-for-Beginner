@@ -125,6 +125,7 @@ Spark is known for its strength in being able to operate in parallel, how will t
 
  ![Codespace](image/executor.png)
 
+in my example, my computer has 12 cores and 24 Gb Ram, I will divide into 2 executors, each executor contains 5 cores and 11Gb ram, 2 cores and 2 Gb Ram into the driver
 
 `How job split for each node??`
  ![Codespace](image/job_stage_task.png)
@@ -206,6 +207,10 @@ spark = SparkSession.builder \
     .config("spark.hadoop.fs.s3a.impl", "org.apache.hadoop.fs.s3a.S3AFileSystem") \
     .config("spark.hadoop.fs.s3a.endpoint", "s3.amazonaws.com") \
     .config("spark.hadoop.fs.s3a.aws.credentials.provider", "org.apache.hadoop.fs.s3a.SimpleAWSCredentialsProvider") \
+    .config("spark.executor.memory", "11g") \
+    .config("spark.executor.cores", "5") \
+    .config("spark.executor.instances", "2") \
+    .config("spark.driver.memory", "2g") \
     .master("spark://192.168.1.20:7077")  \
     .getOrCreate()
 
